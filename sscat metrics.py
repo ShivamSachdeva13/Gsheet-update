@@ -10,11 +10,11 @@ import datetime as dt
 from itertools import product
 
 
+
+
 # In[3]:
 
-
 pip install pymysql
-
 
 # In[3]:
 
@@ -270,8 +270,8 @@ template_custom = [
 ]
 df.loc[df.cat.isin([list(x.values())[0] for x in template_cat]),"attribute1"] = "FMCG"
 df.loc[df.cat.isin(['BAKERY, CAKES & DAIRY','BEVERAGES','FOODGRAINS, OIL & MASALA','SNACKS & BRANDED FOODS']),"attribute2"] = "FnB"
-df.loc[(df.sscat=="CHOCOLATES")&(df.std_unit_value.notnull())&((df.price/df.std_unit_value)>=0.88),"choc_type"] = "PREMIUM CHOCOLATE"
-df.loc[(df.sscat=="CHOCOLATES")&(df.std_unit_value.notnull())&((df.price/df.std_unit_value)<0.88),"choc_type"] = "NON PREMIUM CHOCOLATE"
+df.loc[(df.sscat=="CHOCOLATES")&(df.std_unit_value.notnull())&((df.price/df.std_unit_value)>=0.83),"choc_type"] = "PREMIUM CHOCOLATE"
+df.loc[(df.sscat=="CHOCOLATES")&(df.std_unit_value.notnull())&((df.price/df.std_unit_value)<0.83),"choc_type"] = "NON PREMIUM CHOCOLATE"
 
 
 # In[29]:
